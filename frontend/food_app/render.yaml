@@ -1,13 +1,5 @@
 services:
-  - type: web
+  - type: static
     name: food-frontend
-    rootDir: frontend/food_app
-    env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
-    buildFilter:
-      paths:
-        - frontend/food_app/**/*
-    envVars:
-      - key: NODE_ENV
-        value: production
+    rootDir: frontend/food_app/dist
+    staticPublishPath: .
