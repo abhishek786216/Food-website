@@ -15,7 +15,7 @@ export default function Inputform({ setIsOpen }) {
     const endpoint = isSignUp ? 'signup' : 'login';
 
     try {
-      const res = await axios.post(`http://localhost:3030/${endpoint}`, {
+      const res = await axios.post(`https://food-website-8b8r.onrender.com/${endpoint}`, {
         email,
         password
       });

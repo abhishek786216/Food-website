@@ -33,7 +33,7 @@ export default function AddFoodRecipe() {
     formData.append("ingredients", recipeData.ingredients); // raw string
 
     try {
-      await axios.post("http://localhost:3030/recipe", formData, {
+      await axios.post("https://food-website-8b8r.onrender.com/recipe", formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'authorization': 'bearer ' + localStorage.getItem("token")

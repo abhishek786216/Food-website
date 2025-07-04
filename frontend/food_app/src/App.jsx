@@ -10,7 +10,7 @@ import EditRecipe from './pages/EditRecipe'
 
 const getAllRecipe=async ()=>{
  let allrecipe=[]
- await axios.get('http://localhost:3030').then(res=>{
+ await axios.get('https://food-website-8b8r.onrender.com').then(res=>{
   allrecipe=res.data
  })
 return allrecipe;
