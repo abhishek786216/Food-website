@@ -1,5 +1,0 @@
-services:
-  - type: static
-    name: food-frontend
-    rootDir: frontend/food_app/dist
-    staticPublishPath: .
