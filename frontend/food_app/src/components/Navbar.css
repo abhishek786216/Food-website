@@ -1,0 +1,75 @@
+header {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.5s ease-out;
+}
+
+header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+header ul li:hover {
+  transform: scale(1.05);
+}
+
+header ul li a, 
+header ul li p.login {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+header ul li a:hover,
+header ul li p.login:hover {
+  color: #ffdd57;
+}
+
+.login {
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.login:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffdd57;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

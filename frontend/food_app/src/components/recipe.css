@@ -1,0 +1,111 @@
+/* Container for all recipe cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 32px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Each card */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  animation: scaleFade 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Card Body */
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Title */
+.card-body .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* Icons Section */
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Timer icon */
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Heart and actions */
+.fa-heart {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.action {
+  display: flex;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.editIcon,
+.deleteIcon {
+  color: #444;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.editIcon:hover {
+  color: #007bff;
+}
+
+.deleteIcon:hover {
+  color: #e74c3c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleFade {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

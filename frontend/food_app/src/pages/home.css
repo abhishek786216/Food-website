@@ -1,0 +1,131 @@
+/* Hero Section */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  background: #f9fdfc;
+  position: relative;
+  z-index: 1;
+}
+
+.left {
+  flex: 1;
+  animation: fadeSlideLeft 0.6s ease-in-out;
+}
+
+.left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.left h5 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.left button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #007bff, #00b4db);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.left button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0056b3, #0083b0);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeSlideRight 0.6s ease-in-out;
+}
+
+.right img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Wave */
+.bg {
+  position: relative;
+  top: -60px;
+  z-index: 0;
+}
+
+.bg svg {
+  display: block;
+  width: 100%;
+}
+
+/* Recipe Section */
+.recipe {
+  padding: 40px 10%;
+  background: #d4f6e8;
+  min-height: 100vh;
+  animation: fadeIn 1s ease;
+}
+
+/* Animations */
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    padding: 40px 5%;
+    text-align: center;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .right img {
+    width: 80%;
+    margin-top: 20px;
+  }
+}
