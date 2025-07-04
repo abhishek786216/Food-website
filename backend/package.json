@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "nodemon server.js"
   },
-    "engines": {
-  "node": "22.16.0"
-},
+  "engines": {
+    "node": "22.16.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,5 +20,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.1",
     "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
